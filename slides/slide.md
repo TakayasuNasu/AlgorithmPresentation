@@ -5,14 +5,5 @@ theme: gaia-ex
 ---
 
 
-Algorithm Presentation
+Slide.md
 ---
-
----
-
-#### Agenda
-
-
----
-
-### Conclusion
