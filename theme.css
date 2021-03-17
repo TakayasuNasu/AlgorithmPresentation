@@ -1,0 +1,90 @@
+/* @theme gaia-ex */
+
+@import "gaia";
+
+section {
+  font-family: "Noto Sans CJK JP", "游ゴシック", sans-serif;
+  background-color: white;
+}
+section strong {
+  border-bottom: 3px solid red;
+  font-weight: 800;
+}
+section:not(first) > h1 {
+  font-size: 15px;
+}
+
+section.first {
+  display: grid;
+  grid-template-rows: 0.5fr 1fr 0.5fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+section.first > h1 {
+  grid-row: 1/2;
+  grid-column: 1/4;
+  font-size: 56px;
+}
+section.first > h2 {
+  grid-row: 2/3;
+  grid-column: 1/4;
+  font-size: 36px;
+}
+section.first > h3 {
+  grid-row: 3/4;
+  grid-column: 1/3;
+  width: 100%;
+  text-align: right;
+  font-size: 30px;
+}
+section.outline {
+  background-color: #ddddff;
+}
+section.outline strong {
+  color: red;
+  border: 0px;
+}
+section.outline strong::after {
+  content: "← HERE";
+}
+
+section.chapter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+section.chapter > h2 {
+  font-size: 48px;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  border-bottom: 1px solid blue;
+}
+
+section span.definition::before {
+  content: "def.";
+  color: white;
+  background-color: blue;
+  border-radius: 3px;
+  padding: 5px;
+  margin-right: 1rem;
+}
+
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+
+img[alt~="br"] {
+  display: block;
+  position: absolute;
+  right: 30px;
+  bottom: 10px;
+}
+img[alt~="tr"] {
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
