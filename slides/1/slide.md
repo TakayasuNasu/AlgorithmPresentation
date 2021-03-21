@@ -18,10 +18,10 @@ Algorithm Presentation: Slide 1.
 
 ---
 ### Example:  find 3 elements in 8 items
-input: 
+input:
 
     [6, 61, 10, 24, 9, 1625, 2, 30]
-output (smallest)   
+output (smallest)
 
     [2, 6, 9]
 output (largest)
@@ -36,11 +36,11 @@ output (largest)
             output-array                input
     i:0     []                          <- 6
     i:1     [6]                         <- 61
-    i:2     6, 61]                      <- 10
-    i:3     [6, 10, 61]       -> 61     <- 24 
-    i:4     [6, 10, 24]       -> 24     <- 9  
+    i:2     [6, 61]                     <- 10
+    i:3     [6, 10, 61]       -> 61     <- 24
+    i:4     [6, 10, 24]       -> 24     <- 9
     i:5     [6, 9, 10]                  <- 1625   -- ignore
-    i:6     [2, 6, 9]         -> 10     <- 2 
+    i:6     [2, 6, 9]         -> 10     <- 2
     i:7     [2, 6, 9]                   <- 30     -- ignore
 
 How do I do that??
@@ -57,8 +57,8 @@ Loop (i => 0 to 8 )
         Nothings to do! continue
         ex) array: [6, 9, 10]                  <- 1625
             // array.count = 3  &&  10 < 1625
-    
-    if output-array.count is '3' 
+
+    if output-array.count is '3'
         remove last element from output-array  // [6, 10, 24]  -> 24   <- input:9
         insert the input for output-array  at RIGHT INDEX // [6, 9, 10]
 ```
@@ -70,16 +70,16 @@ Loop (i => 0 to 8 )
   ^                   ^                   ^         ^
  low               middle                high     input
 
- [1,        3,        5,        7,        9]     <- 6   // input < middle 
-                                ^         ^         
-                         low(middle+1)   high  
-                         new middle   
+ [1,        3,        5,        7,        9]     <- 6   // input < middle
+                                ^         ^
+                         low(middle+1)   high
+                         new middle
 
  [1,        3,        5,        7,        9]     <- 6  // input < middle
-                                ^         
-                         low, high, middle     
-** if middle = hight 
-        if middle < input  ----> return middle + 1 
+                                ^
+                         low, high, middle
+** if middle = hight
+        if middle < input  ----> return middle + 1
         else if input < middle ---> return middle  (index: 3)
 
 ```
