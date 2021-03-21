@@ -25,7 +25,7 @@ section.top h1 {
   align-items: center;
   justify-content: center;
   height: 60%;
-  font-size: 12vw;
+  font-size: 8vw;
 }
 
 section.top ul {
@@ -38,7 +38,7 @@ section.headline h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 10vw;
+  font-size: 6vw;
 }
 
 section.first {
