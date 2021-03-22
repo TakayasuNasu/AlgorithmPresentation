@@ -38,10 +38,10 @@ output (largest)
     i:1     [6]                         <- 61
     i:2     [6, 61]                     <- 10
 <<<<<<< HEAD
-    i:3     [6, 10, 61]       -> 61     <- 24 
-    i:4     [6, 10, 24]       -> 24     <- 9  
+    i:3     [6, 10, 61]       -> 61     <- 24
+    i:4     [6, 10, 24]       -> 24     <- 9
     i:5     [6, 9, 10]                  <- 1625   -- ignore
-    i:6     [2, 6, 10]         -> 10     <- 2 
+    i:6     [2, 6, 10]         -> 10     <- 2
 =======
     i:3     [6, 10, 61]       -> 61     <- 24
     i:4     [6, 10, 24]       -> 24     <- 9
@@ -78,35 +78,22 @@ while low <= high
   ^                   ^                   ^         ^
  low               middle                high     input
 
-<<<<<<< HEAD
- [1,        3,        5,        7,        9]     <- 6   // input > middle 
-                                ^         ^         
-                         low(middle+1)   high  
-                         new middle   
-
- [1,        3,        5,        7,        9]     <- 6  // input < middle
-                      ^         ^         
-                    high    low, middle     
-** if middle = hight 
-        if middle < input  ----> return middle + 1 
-=======
- [1,        3,        5,        7,        9]     <- 6   // input < middle
+ [1,        3,        5,        7,        9]     <- 6   // input > middle
                                 ^         ^
                          low(middle+1)   high
                          new middle
 
  [1,        3,        5,        7,        9]     <- 6  // input < middle
-                                ^
-                         low, high, middle
+                      ^         ^
+                    high    low, middle
 ** if middle = hight
         if middle < input  ----> return middle + 1
->>>>>>> main
         else if input < middle ---> return middle  (index: 3)
 ```
 ---
 ### Conclusion
 1. Loop number of items : $\Omicron\lparen N \rparen$
-    
+
 
 
 2. Find the position  :  $\Omicron\lparen logM \rparen$
