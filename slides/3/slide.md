@@ -80,21 +80,21 @@ Loop (i => 0 to 8 )
 
 ### Find the position to insert
 ```swift
+while low <= high
  [1,        3,        5,        7,        9]     <- 6   // middle < input
   ^                   ^                   ^         ^
  low               middle                high     input
 
- [1,        3,        5,        7,        9]     <- 6   // input < middle
-                                ^         ^
-                         low(middle+1)   high
-                         new middle
+ [1,        3,        5,        7,        9]     <- 6   // input < middle 
+                                ^         ^         
+                         low(middle+1)   high  
+                         new middle   
 
- [1,        3,        5,        7,        9]     <- 6  // input < middle
-                                ^
-                         low, high, middle
-** if middle = hight
-        if middle < input  ----> return middle + 1
-        else if input < middle ---> return middle  (index: 3)
+ [1,        3,        5,        7,        9]     <- 6  
+                      ^         ^         
+              high(middle-1)  low,middle     
+
+return middle <--- position to insert
 
 ```
 
