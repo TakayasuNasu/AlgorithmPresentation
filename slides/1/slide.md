@@ -36,7 +36,7 @@ output (largest)
             output-array                input
     i:0     []                          <- 6
     i:1     [6]                         <- 61
-    i:2     6, 61]                      <- 10
+    i:2     [6, 61]                     <- 10
     i:3     [6, 10, 61]       -> 61     <- 24 
     i:4     [6, 10, 24]       -> 24     <- 9  
     i:5     [6, 9, 10]                  <- 1625   -- ignore
@@ -66,6 +66,7 @@ Loop (i => 0 to 8 )
 ---
 ### Find the position to insert
 ```swift
+while low <= high
  [1,        3,        5,        7,        9]     <- 6   // middle < input
   ^                   ^                   ^         ^
  low               middle                high     input
@@ -76,8 +77,8 @@ Loop (i => 0 to 8 )
                          new middle   
 
  [1,        3,        5,        7,        9]     <- 6  // input < middle
-                                ^         
-                         low, high, middle     
+                      ^         ^         
+                    high    low, middle     
 ** if middle = hight 
         if middle < input  ----> return middle + 1 
         else if input < middle ---> return middle  (index: 3)
@@ -85,7 +86,11 @@ Loop (i => 0 to 8 )
 ```
 ---
 ### Conclusion
-1. Loop number of items  -----> $\Omicron\lparen N \rparen$
+1. Loop number of items : $\Omicron\lparen N \rparen$
+    
 
-2. Find the position  -----> $\Omicron\lparen logM \rparen$
+
+2. Find the position  :  $\Omicron\lparen logM \rparen$
+
+    Total Time Complexity ====>  $\Omicron\lparen NlogM \rparen$
 
