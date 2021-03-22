@@ -40,7 +40,7 @@ output (largest)
     i:3     [6, 10, 61]       -> 61     <- 24 
     i:4     [6, 10, 24]       -> 24     <- 9  
     i:5     [6, 9, 10]                  <- 1625   -- ignore
-    i:6     [2, 6, 9]         -> 10     <- 2 
+    i:6     [2, 6, 10]         -> 10     <- 2 
     i:7     [2, 6, 9]                   <- 30     -- ignore
 
 How do I do that??
@@ -71,7 +71,7 @@ while low <= high
   ^                   ^                   ^         ^
  low               middle                high     input
 
- [1,        3,        5,        7,        9]     <- 6   // input < middle 
+ [1,        3,        5,        7,        9]     <- 6   // input > middle 
                                 ^         ^         
                          low(middle+1)   high  
                          new middle   
@@ -82,7 +82,6 @@ while low <= high
 ** if middle = hight 
         if middle < input  ----> return middle + 1 
         else if input < middle ---> return middle  (index: 3)
-
 ```
 ---
 ### Conclusion
