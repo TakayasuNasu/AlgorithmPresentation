@@ -51,7 +51,7 @@ output (largest)
     i:3     [6, 10, 61]       -> 61     <- 24
     i:4     [6, 10, 24]       -> 24     <- 9
     i:5     [6, 9, 10]                  <- 1625   -- ignore
-    i:6     [2, 6, 9]         -> 10     <- 2
+    i:6     [6, 9, 10]        -> 10     <- 2
     i:7     [2, 6, 9]                   <- 30     -- ignore
 
 How do I do that??
@@ -105,6 +105,9 @@ return middle <--- position to insert
 1. Loop number of items  -----> $\Omicron\lparen N \rparen$
 
 2. Find the position  -----> $\Omicron\lparen logM \rparen$
+
+    Total Time Complexity ====>  $\Omicron\lparen NlogM \rparen$
+
 
 ---
 
